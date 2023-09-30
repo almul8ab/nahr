@@ -136,9 +136,8 @@ async def Hussein(event):
     **"""
         await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=joker_313)
     elif event.pattern_match.group(1) == "فحص":
-        success_message = "السورس يعمل بنجاح حبيبي ✅
-        أرسل الاوامر لعرض `القائمة`"
-        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=success_message)
+        hussein_ali = "السورس يعمل بنجاح حبيبي ✅\nلعرض قائمة الاوامر أرسل `.الاوامر`"
+        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=hussein_ali)
         joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
         joker = Get(joker)
         try:
