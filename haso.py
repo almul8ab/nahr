@@ -1,3 +1,4 @@
+import telethon
 import asyncio
 import logging
 from telethon import events
