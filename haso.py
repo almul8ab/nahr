@@ -125,6 +125,7 @@ async def stop_aljoker(event):
     await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
 @ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.(الاوامر|فحص)$"))
 async def Hussein(event):
+    await event.delete()
     if event.pattern_match.group(1) == "الاوامر":
         joker_313 = """**
 🤡 قـائمة اوامر النشر التلقائي للمجموعات
