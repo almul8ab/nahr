@@ -1,7 +1,7 @@
 {
     "name": "حـ313ـسو",
     "description": "اهلا بكم في تنصيب النشر التلقائي لسورس الجوكر",
-    "logo": "https://telegra.ph/file/295cab58309aa90b43226.jpg",
+    "logo": "",
     "stack": "container",
     "repository": "https://t.me/jepthon",
     "keywords": ["python", "chatbot", "telegrambot"],
