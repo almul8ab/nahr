@@ -10,7 +10,7 @@ from config import *
 from asyncio import sleep
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("AL-Joker")
 logger.info("النشر التلقائي شغال الان استمتع ✓")
 
 yaAli = False
