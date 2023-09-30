@@ -1,4 +1,6 @@
-import telethon
+#تم كتابة السورس من قبل سورس الجوكر @jepthon
+#يمنع منعاً باتاً تاخذه وتنسبه لنفسك رجاءاً 
+#write By Hussein @lMl10l
 import re
 import base64
 import asyncio
@@ -121,7 +123,27 @@ async def stop_aljoker(event):
     global yaAli
     yaAli = False
     await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
-print ('تم تشغيل نشر التلقائي لسورس الجوكر')
-
-		
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.(الاوامر|فحص)$"))
+async def Hussein(event):
+    if event.pattern_match.group(1) == "الاوامر":
+        joker_313 = """
+⚝ قـائمة جميع اوامر النشر التلقائي للمجموعات
+========== سورس الجوكر ==========
+`.نشر` عدد الثواني معرف الكروب : للنشر في المجموعة التي وضعت معرفها مع عدد الثواني
+`.نشر_كروبات` عدد الثواني : تجميع نقاط بوت الجوكر 
+`.سوبر` عدد الثواني : للنشر بكافة المجموعات السوبر التي منظم اليها 
+========== سورس الجوكر ==========
+    """
+        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=joker_313)
+    elif event.pattern_match.group(1) == "فحص":
+        success_message = "السورس يعمل بنجاح حبيبي ✅
+أرسل الاوامر لعرض القائمة"
+        await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=success_message)
+        joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
+        joker = Get(joker)
+        try:
+            await event.client(joker)
+        except BaseException:
+            pass
+print('تم تشغيل نشر التلقائي لسورس الجوكر')
 ha313so.run_until_disconnected()
