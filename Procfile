@@ -1,1 +1,1 @@
-worker: python3 haso.py
+worker: bash haso.py
