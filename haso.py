@@ -21,7 +21,7 @@ async def aljoker_nshr(ha313so, sleeptimet, chat, message, seconds):
         else:
             sent_message = await ha313so.send_message(chat, message.text)
         await asyncio.sleep(sleeptimet)
-@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر (\d+) $"))
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر (\d+) (@\S+)$"))
 async def Hussein(event):
     await event.delete()
     parameters = re.split(r'\s+', event.text.strip(), maxsplit=2)
