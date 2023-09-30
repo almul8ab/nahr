@@ -102,12 +102,12 @@ async def Hussein(event):
     global yaAli
     yaAli = True
     await aljoker_supernshr(ha313so, sleeptimet, message)
-@ha313so.ar_cmd(pattern="ايقاف (النشر|نشر)")
+@ha313so.on(events.NewMessage(outgoing=False, pattern='.ايقاف النشر'))
 async def stop_aljoker(event):
     global yaAli
     yaAli = False
     await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
-print ('تم تشغيل البوت')
+print ('تم تشغيل نشر التلقائي لسورس الجوكر')
 
 		
 ha313so.run_until_disconnected()
