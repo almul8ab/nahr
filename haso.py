@@ -19,7 +19,7 @@ async def aljoker_nshr(ha313so, sleeptimet, chat, message, seconds):
         else:
             sent_message = await ha313so.send_message(chat, message.text)
         await asyncio.sleep(sleeptimet)
-@ha313so.on(events.NewMessage(pattern=r"^\.نشر (\d+)$"))
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر (\d+) $"))
 async def Hussein(event):
     await event.delete()
     parameters = re.split(r'\s+', event.text.strip(), maxsplit=2)
@@ -61,7 +61,7 @@ async def aljoker_allnshr(ha313so, sleeptimet, message):
                 except Exception as e:
                     print(f"Error in sending message to chat {chat.id}: {e}")
         await asyncio.sleep(sleeptimet)
-@ha313so.on(events.NewMessage(pattern=r"^\.نشر_كروبات (\d+)$"))
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر_كروبات (\d+)$"))
 async def Hussein(event):
     await event.delete()
     seconds = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
@@ -97,7 +97,7 @@ async def aljoker_supernshr(ha313so, sleeptimet, message):
                 except Exception as e:
                     print(f"Error in sending message to chat {chat.id}: {e}")
         await asyncio.sleep(sleeptimet)
-@ha313so.on(events.NewMessage(pattern=r"^\.سوبر (\d+)$"))
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.سوبر (\d+)$"))
 async def Hussein(event):
     await event.delete()
     seconds = "".join(event.text.split(maxsplit=1)[1:]).split(" ", 2)
