@@ -1,7 +1,6 @@
 {
-    "name": "SHAHM",
-    "description": "اهلا بكم في تنصيب سورس شهم تجميع النقاط",
-    "logo": "https://telegra.ph/file/295cab58309aa90b43226.jpg",
+    "name": "حـ313ـسو",
+    "description": "اهلا بكم في تنصيب النشر التلقائي لسورس الجوكر",
     "stack": "container",
     "repository": "https://t.me/ql8ql",
     "keywords": ["python", "chatbot", "telegrambot"],
@@ -12,28 +11,13 @@
             "value": "",
             "required": true
         },
-        "DEVLO": {
-            "description": "ايدي حساب التحكم اذا ماتعرفه لاتغيرة",
-            "value": "6066647930",
-            "required": true
-        },
         "APP_HASH": {
             "description": "الايـبـي هــاش",
             "value": "",
             "required": true
         },
-        "TERMUX": {
+        "SESSION": {
             "description": "كود تيرمكس",
-            "value": "",
-            "required": true
-        },
-        "TG_BOT_USERNAME": {
-            "description": "هنا ضع معرف بوتك بدون @",
-            "value": "",
-            "required": true
-        },
-        "TG_BOT_TOKEN": {
-            "description": "هنا ضع توكن بوتك الذي صنعته",
             "value": "",
             "required": true
         }
