@@ -9,7 +9,9 @@ from telethon import events
 from config import *
 from asyncio import sleep
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
-LOGS = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.info("النشر التلقائي شغال الان استمتع ✓")
 
 yaAli = False
 async def aljoker_nshr(ha313so, sleeptimet, chat, message, seconds):
@@ -21,12 +23,12 @@ async def aljoker_nshr(ha313so, sleeptimet, chat, message, seconds):
         else:
             sent_message = await ha313so.send_message(chat, message.text)
         await asyncio.sleep(sleeptimet)
-@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر (\d+) (@\S+)$"))
+@ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.نشر (\d+) (@?\S+)$"))
 async def Hussein(event):
     await event.delete()
     parameters = re.split(r'\s+', event.text.strip(), maxsplit=2)
     if len(parameters) != 3:
-        return await event.edit("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
+        return await event.reply("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
     seconds = int(parameters[1])
     chat_usernames = parameters[2].split()
     ha313so = event.client
@@ -38,7 +40,7 @@ async def Hussein(event):
             chat = await ha313so.get_entity(chat_username)
             await aljoker_nshr(ha313so, seconds, chat.id, message, seconds)  # تمرير قيمة seconds هنا لكل مجموعة
         except Exception as e:
-            await event.edit(f"⌔∮ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
+            await event.reply(f"⌔∮ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
             )
         await asyncio.sleep(1)
     joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
@@ -71,7 +73,7 @@ async def Hussein(event):
     try:
         sleeptimet = int(seconds[0])
     except Exception:
-        return await event.edit("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
+        return await event.reply("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
     ha313so = event.client
     global yaAli
     yaAli = True
@@ -107,7 +109,7 @@ async def Hussein(event):
     try:
         sleeptimet = int(seconds[0])
     except Exception:
-        return await event.edit("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
+        return await event.reply("⌔∮ يجب استخدام كتابة صحيحة الرجاء التاكد من الامر اولا ⚠️")
     ha313so = event.client
     global yaAli
     yaAli = True
