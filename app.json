@@ -1,6 +1,6 @@
 {
-    "name": "حـ313ـسو",
-    "description": "اهلا بكم في تنصيب النشر التلقائي لسورس الجوكر",
+    "name": "حـ313ـو",
+    "description": "اهلا بكم في تنصيب النشر التلقائي الخاص بسورس الجوكر",
     "logo": "",
     "stack": "container",
     "repository": "https://t.me/jepthon",
@@ -22,16 +22,5 @@
             "value": "",
             "required": true
         }
-    },
-    "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-apt.git"
-        },
-        {
-            "url": "https://github.com/chrismytton/heroku-buildpack-jq"
-        },
-        {
-            "url": "heroku/python"
-        }
-    ]
+    }
 }
