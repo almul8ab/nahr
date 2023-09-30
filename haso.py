@@ -126,18 +126,18 @@ async def stop_aljoker(event):
 @ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.(الاوامر|فحص)$"))
 async def Hussein(event):
     if event.pattern_match.group(1) == "الاوامر":
-        joker_313 = """
+        joker_313 = """**
 ⚝ قـائمة جميع اوامر النشر التلقائي للمجموعات
 ========== سورس الجوكر ==========
 `.نشر` عدد الثواني معرف الكروب : للنشر في المجموعة التي وضعت معرفها مع عدد الثواني
 `.نشر_كروبات` عدد الثواني : تجميع نقاط بوت الجوكر 
 `.سوبر` عدد الثواني : للنشر بكافة المجموعات السوبر التي منظم اليها 
 ========== سورس الجوكر ==========
-    """
+    **"""
         await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=joker_313)
     elif event.pattern_match.group(1) == "فحص":
         success_message = "السورس يعمل بنجاح حبيبي ✅
-أرسل الاوامر لعرض القائمة"
+        أرسل الاوامر لعرض `القائمة`"
         await event.reply(file='https://telegra.ph/file/a9ab192d3196e014ee015.jpg', message=success_message)
         joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
         joker = Get(joker)
