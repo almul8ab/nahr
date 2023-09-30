@@ -7,18 +7,8 @@
     "keywords": ["python", "chatbot", "telegrambot"],
     "website": "https://t.me/jepthon",
     "env": {
-        "APP_ID": {
-            "description": "الايـبـي ايــدي",
-            "value": "",
-            "required": true
-        },
-        "APP_HASH": {
-            "description": "الايـبـي هــاش",
-            "value": "",
-            "required": true
-        },
         "SESSION": {
-            "description": "كود تيرمكس",
+            "description": "ضع كود التيرمكس الذي استخرجته من بوت الجوكر",
             "value": "",
             "required": true
         }
