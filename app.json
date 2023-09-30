@@ -2,9 +2,9 @@
     "name": "حـ313ـسو",
     "description": "اهلا بكم في تنصيب النشر التلقائي لسورس الجوكر",
     "stack": "container",
-    "repository": "https://t.me/ql8ql",
+    "repository": "https://t.me/jepthon",
     "keywords": ["python", "chatbot", "telegrambot"],
-    "website": "https://t.me/ql8ql",
+    "website": "https://t.me/jepthon",
     "env": {
         "APP_ID": {
             "description": "الايـبـي ايــدي",
