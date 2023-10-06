@@ -23,6 +23,5 @@
             "required": true
         }
     },
-    "skip_automatic_deploy": true,
-    "region": "europe"
+    "automatic_deploy": false
 }
