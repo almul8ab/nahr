@@ -11,6 +11,17 @@
             "description": "ضع كود التيرمكس الذي استخرجته من بوت الجوكر",
             "value": "",
             "required": true
+        },
+        "APP_ID": {
+            "description": "ضع ابب ايدي المكون من 6 ارقام",
+            "value": "",
+            "required": true
+        },
+        "APP_HASH": {
+            "description": "ضع ابب هاش المكون من ارقام وحروف",
+            "value": "",
+            "required": true
         }
-    }
+    },
+    "skip_automatic_deploy": true
 }
