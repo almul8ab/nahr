@@ -23,5 +23,6 @@
             "required": true
         }
     },
-    "skip_automatic_deploy": true
+    "skip_automatic_deploy": true,
+    "region": "europe"
 }
