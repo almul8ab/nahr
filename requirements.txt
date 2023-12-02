@@ -3,3 +3,5 @@ heroku3
 gitpython
 requests
 asyncio
+Flask
+flask_restful
