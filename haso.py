@@ -151,22 +151,22 @@ async def disable_hussein(event):
 def joker_unread_media(message):
     return message.media_unread and (message.photo or message.video)
 
-async def hussein(event, caption, client_id):
+async def Hussein(event, caption):
     media = await event.download_media()
     sender = await event.get_sender()
     sender_id = event.sender_id
     lMl10l_date = event.date.strftime("%Y-%m-%d")
     lMl10l_day = Aljoker_Asbo3[event.date.strftime("%A")]
-    if sender_id == client_id:
-        await client.send_file(
-            "me",
-            media,
-            caption=caption.format(sender.first_name, sender_id, lMl10l_date, lMl10l_day),
-            parse_mode="markdown"
-        )
+    await bot.send_file(
+        "me",
+        media,
+        caption=caption.format(sender.first_name, sender_id, lMl10l_date, lMl10l_day),
+        parse_mode="markdown"
+    )
     os.remove(media)
-@ha313so.on(events.NewMessage(func=lambda e: e.is_private and joker_unread_media(e, client.uid) and e.sender_id != client.uid))
-async def reda(event):
+
+@ha313so.on(events.NewMessage(func=lambda e: e.is_private and joker_unread_media(e) and e.sender_id != bot.uid))
+async def Reda(event):
     if hussein_enabled:
         caption = """**
            ♡  غير مبري الذمة اذا استعملته للأبتزاز  ♡
@@ -177,7 +177,7 @@ async def reda(event):
 ♡  أرسلت في يوم `{3}`
        ♡    ALJOKER    ♡
         **"""
-        await hussein(event, caption, client.uid)
+        await Hussein(event, caption)
 
 @ha313so.on(events.NewMessage(outgoing=True, pattern=r"^\.(الاوامر|فحص)$"))
 async def Hussein(event):
