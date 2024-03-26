@@ -14,6 +14,7 @@ logger = logging.getLogger("AL-Joker")
 logger.info("النشر التلقائي شغال الان استمتع ✓")
 
 yaAli = False
+hussein_enabled = False
 
 Aljoker_Asbo3 = {
     'Monday': 'الاثنين',
@@ -136,13 +137,13 @@ async def stop_aljoker(event):
     global yaAli
     yaAli = False
     await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
-@ha313so.on(events.NewMessage(pattern='.تفعيل_الذاتية'))
+@ha313so.on(events.NewMessage(outgoing=True, pattern='.الذاتية تفعيل'))
 async def enable_hussein(event):
     nonlocal hussein_enabled
     hussein_enabled = True
     await event.edit("**᯽︙تم تفعيل ميزة حفظ الذاتيات بنجاح ✓**")
 
-@ha313so.on(events.NewMessage(pattern='.تعطيل_الذاتية'))
+@ha313so.on(events.NewMessage(outgoing=True, pattern='.الذاتية تعطيل'))
 async def disable_hussein(event):  
     nonlocal hussein_enabled 
     hussein_enabled = False
