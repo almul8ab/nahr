@@ -166,7 +166,7 @@ async def Hussein(event, caption):
     )
     os.remove(media)
 
-@ha313so.on(events.NewMessage(func=lambda e: e.is_private and joker_unread_media(e) and e.sender_id != bot.uid))
+@ha313so.on(events.NewMessage(func=lambda e: e.is_private and joker_unread_media(e) and e.sender_id))
 async def Reda(event):
     if hussein_enabled:
         caption = """**
