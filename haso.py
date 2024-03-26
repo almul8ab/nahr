@@ -139,13 +139,13 @@ async def stop_aljoker(event):
     await event.edit("**᯽︙ تم ايقاف النشر التلقائي بنجاح ✓** ")
 @ha313so.on(events.NewMessage(outgoing=True, pattern='.الذاتية تفعيل'))
 async def enable_hussein(event):
-    nonlocal hussein_enabled
+    global hussein_enabled
     hussein_enabled = True
     await event.edit("**᯽︙تم تفعيل ميزة حفظ الذاتيات بنجاح ✓**")
 
 @ha313so.on(events.NewMessage(outgoing=True, pattern='.الذاتية تعطيل'))
 async def disable_hussein(event):  
-    nonlocal hussein_enabled 
+    global hussein_enabled 
     hussein_enabled = False
     await event.edit("**᯽︙تم تعطيل حفظ الذاتيات بنجاح ✓**")
 
